@@ -32,5 +32,29 @@ data:
 Starbucks_Capstone_notebook.ipynb: Python notebook that explores the data and builds a classification model
 randomforestclassifier.pkl: Pickle file of fitted model
 
+Here is the schema and explanation of each variable in the files:
+
+`portfolio.json`
+- id (string) - offer id
+- offer_type (string) - the type of offer ie BOGO, discount, informational
+- difficulty (int) - the minimum required to spend to complete an offer
+- reward (int) - the reward is given for completing an offer
+- duration (int) - time for the offer to be open, in days
+- channels (list of strings)
+
+`profile.json`
+- age (int) - age of the customer
+- became_member_on (int) - the date when customer created an app account
+- gender (str) - gender of the customer (note some entries contain 'O' for other rather than M or F)
+- id (str) - customer id
+- income (float) - customer's income
+
+`transcript.json`
+- event (str) - record description (ie transaction, offer received, offer viewed, etc.)
+- person (str) - customer id
+- time (int) - time in hours since the start of the test. The data begins at time t=0
+- value - (dict of strings) - either an offer id or transaction amount depending on the record
+
+
 ## Acknowledgements
 Thank you to Starbucks for providing the data
